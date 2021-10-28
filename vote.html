@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
    <title>계굴계굴 계모임</title>
+   
    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+     <![endif]-->
 
-   <!-- Meta -->
    <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-   <meta name="description" content="codedthemes">
-   <meta name="keywords" content=", Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
-   <meta name="author" content="codedthemes">
-
    <!-- Favicon icon -->
    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
    <!-- Google font-->
    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
 
    <!-- themify -->
    <link rel="stylesheet" type="text/css" href="assets/icon/themify-icons/themify-icons.css">
-
 
    <!-- iconfont -->
    <link rel="stylesheet" type="text/css" href="assets/icon/icofont/css/icofont.css">
@@ -35,16 +29,21 @@
    <!-- simple line icon -->
    <link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
 
-    <!-- Required Fremwork -->
-    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+   <!-- Required Fremwork -->
+   <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+   <!-- Chartlist chart css -->
+   <link rel="stylesheet" href="assets/plugins/chartist/dist/chartist.css" type="text/css" media="all">
+
+   <!-- Weather css -->
+   <link href="assets/css/svg-weather.css" rel="stylesheet">
+
 
    <!-- Style.css -->
    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
    <!-- Responsive.css-->
    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-
-
 
 </head>
 
@@ -85,16 +84,23 @@
                </li>
             </ul>
             <!-- Navbar Right Menu-->
-            <div class="navbar-custom-menu">
+            <div class="navbar-custom-menu f-right">
+              <div class="upgrade-button">
+                <a href="#" class="icon-circle txt-white btn btn-sm btn-primary upgrade-button">
+                    <span>Upgrade To Pro</span>
+                </a>
+              </div>
+
                <ul class="top-nav">
                   <!--Notification Menu-->
+
                   <li class="dropdown notification-menu">
                      <a href="#!" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
                         <i class="icon-bell"></i>
                         <span class="badge badge-danger header-badge">4</span>
                      </a>
                      <ul class="dropdown-menu">
-                        <li class="not-head"> <b class="text-primary">4</b> 개의 새 알림</li>
+                        <li class="not-head"><b class="text-primary">4</b> 개의 새 알림</li>
                         <li class="bell-notification">
                            <a href="javascript:;" class="media">
                               <span class="media-left media-icon">
@@ -108,7 +114,7 @@
                               <span class="media-left media-icon">
                     <img class="img-circle" src="assets/images/avatar-2.png" alt="User Image">
                   </span>
-                              <div class="media-body"><span class="block">혜연님이 회원님을 따라했습니다</span><span class="text-muted block-time">20min ago</span></div>
+                              <div class="media-body"><span class="block">상훈님이 회원님을 따라했습니다</span><span class="text-muted block-time">20min ago</span></div>
                            </a>
                         </li>
                         <li class="bell-notification">
@@ -217,62 +223,40 @@
 
             <!-- Sidebar Menu-->
             <ul class="sidebar-menu">
-               <li class="nav-level">--- Navigation</li>
-               <li class="treeview">
-                   <a class="waves-effect waves-dark" href="index.html">
-                       <i class="icon-speedometer"></i><span> Dashboard</span>
-                   </a>
-               </li>
+                <li class="nav-level">--- Navigation</li>
+                <li class="active treeview">
+                    <a class="waves-effect waves-dark" href="index.html">
+                        <i class="icon-speedometer"></i><span> Dashboard</span>
+                    </a>
+                </li>
 
 
-               <li class="nav-level">--- Components</li>
-               <li class="active treeview">
-                  <a class="waves-effect waves-dark" href="createGroup.html">
-                     <i class="icon-briefcase"></i><span> 계 생성 </span>
+                <li class="nav-level">--- Components</li>
+                <li class="treeview">
+                   <a class="waves-effect waves-dark" href="createGroup.html">
+                      <i class="icon-briefcase"></i><span> 계 생성 </span>
+                  </a>
+                </li>
+                <li class="treeview">
+                  <a class="waves-effect waves-dark" href="readGroup.html">
+                     <i class="icon-chart"></i><span> 계 정보 확인 </span>
                  </a>
                </li>
                <li class="treeview">
-                 <a class="waves-effect waves-dark" href="readGroup.html">
-                    <i class="icon-chart"></i><span> 계 정보 확인 </span>
-                </a>
-              </li>
-              <li class="treeview">
-                 <a class="waves-effect waves-dark" href="acceptInvite.html">
-                    <i class="icon-docs"></i><span> 초대 수락 </span>
-                </a>
-              </li>
-
-              <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-book-open"></i><span>주식 스터디</span><i class="icon-arrow-down"></i></a>
-                 <ul class="treeview-menu">
-                       <li><a class="waves-effect waves-dark" href="chatting.html"><i class="icon-arrow-right"></i> 채팅</a></li>
-                       <li><a class="waves-effect waves-dark" href="morris-chart.html"><i class="icon-arrow-right"></i> 주식 검색</a></li>
-                   </ul>
+                  <a class="waves-effect waves-dark" href="acceptInvite.html">
+                     <i class="icon-docs"></i><span> 초대 수락 </span>
+                 </a>
                </li>
 
-
-               <li class="nav-level">--- More</li>
-
-               <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-docs"></i><span>Pages</span><i class="icon-arrow-down"></i></a>
-                   <ul class="treeview-menu">
-                       <li class="treeview"><a href="#!"><i class="icon-arrow-right"></i><span> Authentication</span><i class="icon-arrow-down"></i></a>
-                           <ul class="treeview-menu">
-                               <li><a class="waves-effect waves-dark" href="register1.html" target="_blank"><i class="icon-arrow-right"></i> Register 1</a></li>
-
-                               <li><a class="waves-effect waves-dark" href="login1.html" target="_blank"><i class="icon-arrow-right"></i><span> Login 1</span></a></li>
-                               <li><a class="waves-effect waves-dark" href="forgot-password.html" target="_blank"><i class="icon-arrow-right"></i><span> Forgot Password</span></a></li>
-
-                           </ul>
-                       </li>
-
-                       <li><a class="waves-effect waves-dark" href="404.html" target="_blank"><i class="icon-arrow-right"></i> Error 404</a></li>
-                       <li><a class="waves-effect waves-dark" href="sample-page.html"><i class="icon-arrow-right"></i> Sample Page</a></li>
-
-                   </ul>
-               </li>
+               <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-book-open"></i><span>주식 스터디</span><i class="icon-arrow-down"></i></a>
+                  <ul class="treeview-menu">
+                        <li><a class="waves-effect waves-dark" href="chatting.html"><i class="icon-arrow-right"></i> 채팅</a></li>
+                        <li><a class="waves-effect waves-dark" href="morris-chart.html"><i class="icon-arrow-right"></i> 주식 검색</a></li>
+                    </ul>
+                </li>
 
 
                 <li class="nav-level">--- More</li>
-
                 <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-docs"></i><span>Pages</span><i class="icon-arrow-down"></i></a>
                     <ul class="treeview-menu">
                         <li class="treeview"><a href="#!"><i class="icon-arrow-right"></i><span> Authentication</span><i class="icon-arrow-down"></i></a>
@@ -348,11 +332,10 @@
          <div class="had-container">
             <div class="card card_main header-users-main">
                <div class="card-content user-box">
-
                   <div class="md-group-add-on p-20">
                      <span class="md-add-on">
-          <i class="icofont icofont-search-alt-2 chat-search"></i>
-        </span>
+                                    <i class="icofont icofont-search-alt-2 chat-search"></i>
+                                 </span>
                      <div class="md-input-wrapper">
                         <input type="text" class="md-form-control" name="username" id="search-friends">
                         <label>Search</label>
@@ -569,6 +552,9 @@
                      <i class="icofont icofont-location-arrow f-20 "></i>
                  </button>
 
+               <button type="button" class="chat-send waves-effect waves-light">
+                    <i class="icofont icofont-location-arrow f-20 "></i>
+                </button>
             </div>
 
          </div>
@@ -576,273 +562,235 @@
       <!-- Sidebar chat end-->
       <div class="content-wrapper">
          <!-- Container-fluid starts -->
+         <!-- Main content starts -->
          <div class="container-fluid">
-            <!-- Main content starts -->
 
-            <!-- Header starts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="row">
-               <div class="col-sm-12 p-0">
-                  <div class="main-header">
-                     <h4>계 생성하기</h4>
-                     <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
-                        <li class="breadcrumb-item">
-                           <a href="index.html">
-                              <i class="icofont icofont-home"></i>
-                           </a>
-                        </li>
-                        <li class="breadcrumb-item">
-                           <a href="#"> Create Group </a>
-                        </li>
-                        <li class="breadcrumb-item"><a href="#">Create</a>
-                        </li>
-                     </ol>
-                  </div>
+               <div class="main-header">
+                  <h4>Dashboard</h4>
                </div>
             </div>
-            <!-- Header ends -->
+            <!-- 4-blocks row start -->
 
 
-            <!-- row start -->
-            <div class="row">
-               <!-- Scale Open Accordion start -->
-               <div class="col-lg-6">
-                  <div class="card">
-                     <div class="card-header">
-                        <h5 class="card-header-text">SCALE ACCORDION</h5>
-                     </div>
-                     <div class="card-block accordion-block">
-                        <div class="accordion-box" id="sclae-accordion" style="margin-bottom:80px">
-                           <a class="accordion-msg">개인정보 수집 및 활용 동의</a>
-                           <div class="accordion-desc" >
-                              <p>
-                                 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.
-회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
-회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.
+				<!-- Row start -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="card-header-text">계굴계굴 투표하기</h5>
+							</div>
 
-<br/><br/>
-■ 수집하는 개인정보 항목
-
-회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
-
-<br/>
-ο 수집항목 : 이름 , 생년월일 , 성별 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변
-<br/>
-ο 개인정보 수집방법 : 홈페이지(회원가입) , 서면양식
-
-<br/><br/>
-■ 개인정보의 수집 및 이용목적
-
-회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
-
-<br/>
-ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송
-<br/>
-ο 회원 관리
-회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 고지사항 전달 ο 마케팅 및 광고에 활용
-접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
-
-<br/><br/>
-■ 개인정보의 보유 및 이용기간
-
-회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.
-
-
-</p>
-</br>
-<div class="rkmd-checkbox checkbox-rotate checkbox-ripple b-none m-b-20" style="margin-bottom:30px">
-   <label class="input-checkbox checkbox-primary">
-      <input type="checkbox" id="checkbox">
-      <span class="checkbox"></span>
-   </label>
-   <div class="captions">동의합니다.</div>
-</div>
-                           </div>
-                           
-                           <a class="accordion-msg">
-                              <label>이용약관</label>
+							<div class="card-block">
+								<div class="row m-b-30 advance-elements">
                               
-                              
-                           </a>
-                           <div class="accordion-desc" style="padding-bottom: -15px;">
-                              <p>
-                                 제 1 조 (목적)
-이 약관은 네이버(주)(이하 ‘회사’라 합니다)가 제공하는 네이버 유료서비스의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항 기타 필요한 사항을 규정함을 목적으로 합니다.
-<br/>
-제 2 조 (약관의 게시와 개정)
-①회사는 이 약관을 회원이 그 전부를 인쇄할 수 있고 확인할 수 있도록 기술적 조치를 취합니다.
-②회사는 회원이 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약철회 등과 같은 중요한 내용을 회원이 쉽게 이해할 수 있도록 별도의 연결화면 또는 팝업화면 등을 제공합니다.
-③회사는 ‘콘텐츠산업진흥법’, ‘전자상거래등에서의소비자보호에관한법률’, ‘약관의규제에관한법률’ 등 관련 법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
-④회사가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 서비스 초기 화면에 그 개정약관의 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만, 회원에게 불리한 약관의 개정의 경우에는 30일 전부터 적용일자 전일까지 공지하며, 공지 외에 일정기간 서비스 내 전자우편, 전자쪽지, 로그인시 동의창 등의 전자적 수단을 통해 따로 명확히 통지하도록 합니다.
-⑤회사가 전항에 따라 개정약관을 공지 또는 통지하면서 회원에게 전항의 공지기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 회원이 명시적으로 거부의 의사표시를 하지 아니한 경우 회원이 개정약관에 동의한 것으로 봅니다.
-⑥회원이 개정약관의 적용에 동의하지 않는 경우 회사는 개정 약관의 내용을 적용할 수 없으며, 이 경우 회원은 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 회사는 이용계약을 해지할 수 있습니다.
-⑦회원은 전항에 따른 이용계약의 해지로 손해가 발생한 경우 회사에 이에 대한 배상을 청구할 수 있습니다.
-제3조 (약관의 해석)
-이 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 ‘콘텐츠진흥법’, ‘전자상거래등에서의소비자보호에관한법률’, ‘약관의규제에관한법률’, 문화체육관광부장관이 정하는 ‘콘텐츠이용자보호지침’, 기타 관계법령, ‘네이버 이용약관’ 또는 상관례에 따릅니다.
-제4조 (회원에 대한 통지)
-①회사가 회원에 대한 통지를 하는 경우 이 약관에 별도 규정이 없는 한 서비스 내 전자우편주소, 전자쪽지 등으로 할 수 있습니다.
-②회사는 회원 전체에 대한 통지의 경우 7일 이상 회사의 게시판에 게시함으로써 제1항의 통지에 갈음할 수 있습니다. 다만, 회원 본인의 거래와 관련하여 중대한 영향을 미치는 사항에 대하여는 제1항의 통지를 합니다.
-제5조 (유료서비스의 내용 등의 게시)
-①회사는 다음 사항을 해당 네이버 유료서비스의 이용 초기화면이나 FAQ 등에 회원이 알기 쉽게 표시합니다.
-1.네이버 유료서비스의 명칭 또는 제호
-2.네이버 유료서비스 제공자의 성명(법인인 경우에는 법인의 명칭), 주소, 전화번호
-3.네이버 유료서비스의 내용, 이용방법, 이용료, 기타 이용조건
-②회사의 유료서비스의 이용 가능 기기 및 이용에 필요한 최소한의 기술사양은 권장사양정보에 따릅니다.
-③회사는 유료서비스를 제공함에 있어 유료 서비스의 교환·반품·보증과 그 대금 환불의 조건 및 절차에 관한 사항을 제공합니다.
-제6조 (이용계약의 성립 등)
-①회원은 회사가 제공하는 다음 또는 이와 유사한 절차에 의하여 이용신청을 합니다. 회사는 계약 체결 전에 각 호의 사항에 관하여 회원이 정확하게 이해하고 실수 또는 착오 없이 거래할 수 있도록 정보를 제공합니다.
-1.유료서비스의 확인 및 선택
-2.결제방법의 선택 및 결제정보의 입력
-3.유료서비스의 이용신청에 관한 확인 또는 회사의 확인에 대한 동의
-②회사는 회원의 이용신청이 다음 각 호에 해당하는 경우에는 승낙하지 않거나 승낙을 유보할 수 있습니다.
-1.실명이 아니거나 타인의 명의를 이용한 경우
-2.허위의 정보를 기재하거나, 회사가 제시하는 내용을 기재하지 않은 경우
-3.미성년자가 ‘청소년보호법’ 등 관련 법령에 의해서 이용이 금지되는 유료서비스를 이용하고자 하는 경우
-4.서비스 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우
-③이용계약의 성립시기는 ‘가입완료’ 또는 ‘구매완료’를 신청절차 상에서 표시한 시점으로 합니다.
-④회원이 유료서비스를 이용하기 위해서는 이 약관에 동의 후 각 서비스에 따른 이용조건에 따라 이용요금을 지급하여야 합니다.
-제7조 (유료서비스의 중단 및 변경)
-①회사는 사업 종목의 전환, 사업의 포기, 업체 간의 통합 등의 이유로 네이버 유료서비스를 제공할 수 없게 되는 경우에는 회사는 이 약관에서 정한 방법으로 회원에게 통지하고 당초 회사에서 제시한 조건 또는 ‘콘텐츠이용자보호지침’ 및 관련 법령 규정에서 정한 바에 따라 회원에게 보상합니다.
-②회사는 상당한 이유가 있는 경우에 운영상, 기술상의 필요에 따라 제공하고 있는 전부 또는 일부의 네이버 유료서비스를 변경할 수 있고, 변경 전 해당 서비스 초기 화면에 관련 사항을 게시합니다. 다만, 변경된 내용이 중대하거나 회원에게 불리한 경우에는 이 약관에서 정한 방법으로 통지하고, 중대하거나 회원에게 불리한 변경 내용에 동의하지 않는 회원은 제8조에서 정한 바에 따라 네이버 유료서비스 이용계약을 해지할 수 있습니다.
-제8조 (회원의 청약철회 및 계약해지)
-①회사와 하나금융TI 유료서비스 이용계약을 체결한 회원은 관련 법령에서 정한 바에 따라 일정 기간 내에 청약을 철회할 수 있습니다. 단, 네이버 유료서비스에는 ‘콘텐츠산업진흥법’, ‘전자상거래등에서의소비자보호에관한법률’ 등에서 규정하는 청약철회가 불가능한 서비스가 포함되어 있습니다. 이 경우 회사는 청약철회권 제한을 위해 관련 법령상 필요한 조치를 취합니다.
-②회원은 다음 각 호의 사유가 있을 때 네이버 유료서비스 이용계약을 해지 또는 해제할 수 있습니다.
-1.하나금융TI 유료서비스의 하자를 회사가 보완, 수정할 수 없는 경우 네이버 유료서비스를 공급받은 날로부터 1개월 이내
-2.하나금융TI 유료서비스 회원이 이 약관의 개정 또는 제7조 제2항 단서에 따른 서비스 변경에 동의하지 않아 회원탈퇴 또는 네이버 유료 서비스 이용계약을 해지하는 경우
-③회원이 전항에 따라 네이버 유료서비스 이용계약을 해지 또는 해제하는 경우 회사는 회원으로부터 지급받은 대금을 당초 회사에서 정한 조건 또는 ‘콘텐츠이용자보호지침’ 및 관련 법령 규정, 이 약관에서 정한 바에 따라 회원에게 환불합니다.
-④회사, 하나금융TI 유료서비스의 대금을 지급 받은 자 또는 회원과 네이버 유료서비스 이용계약을 체결한 자가 동일인이 아닌 경우에 각자는 청약철회 등과 관련한 의무의 이행에 있어서 연대하여 책임을 집니다.
-제9조 (회사의 계약해제, 해지 및 이용제한)
-①회사는 회원이 하나금융TI 이용약관에서 정한 금지행위를 하였을 경우 해당 조항에 따라 사전통지 없이 계약을 해제, 해지하거나 또는 기간을 정하여 서비스이용을 제한할 수 있습니다.
-②제1항의 사유로 환불이 필요할 경우 회사는 회원이 유료서비스 이용으로부터 얻은 이익 및 환불수수료(10% 또는 1,000원 중 큰 금액)에 해당하는 금액을 공제하고 다음 각호에 따라 환불합니다.
-1.회사는 회원에게 계약해제, 해지의 의사표시에 대하여 회신한 날로부터 3영업일 이내에 대금의 결제와 동일한 방법으로 이를 환불하여야 하고 동일한 방법으로 환불이 불가능할 때에는 이를 사전에 고지하여야 합니다. 다만, 수납확인이 필요한 결제수단의 경우에는 수납확인일로부터 3영업일 이내에 이를 환불하도록 합니다.
-2.회사는 위 대금을 환불함에 있어서 회원이 신용카드 또는 전자화폐 등의 결제수단으로 재화 등의 대금을 지급한 때에는 지체 없이 당해 결제수단을 제공한 사업자로 하여금 재화 등의 대금의 청구를 정지 또는 취소하도록 요청합니다. 다만, 제2항 각 호외의 본문 및 제2항 제1호 단서의 경우에는 그러하지 아니할 수 있습니다.
-③제1항의 해제, 해지는 회사가 정한 통지방법에 따라 회원에게 그 의사를 표시한 때에 효력이 발생합니다.
-④회사의 해제, 해지 및 이용제한에 대하여 회원은 회사가 정한 절차에 따라 이의신청을 할 수 있습니다. 이 때 이의가 정당하다고 회사가 인정하는 경우, 회사는 즉시 서비스의 이용을 재개합니다.
-제10조 (사용기간 등)
-하나금융TI 유료서비스의 사용기간은 사전에 별도로 표시되지 않는 한 구매일로부터 1년입니다. 해당 기간이 경과한 네이버 유료서비스는 이용권이 소멸되며 보유목록에서 삭제됩니다.
-제11조 (유료서비스 하자 등에 의한 회원피해보상)
-회사는 유료서비스의 하자 등에 의한 회원의 피해보상 기준, 범위, 방법 및 절차에 관한 사항을 ‘콘텐츠이용자보호지침’에 따라 처리합니다.
-제12조 (책임 제한)
-①회사는 관계법령의 변경, 천재지변 또는 이에 준하는 불가항력으로 인하여 유료서비스를 제공할 수 없는 경우에는 유료서비스 제공에 관한 책임이 면제됩니다.
-②회사는 회원의 귀책사유로 인한 유료서비스 이용의 장애에 대하여는 회사의 귀책사유가 없는 한 책임을 지지 않습니다.
-③회사는 회원 상호간 또는 회원과 제3자간에 유료서비스를 매개로 하여 발생한 분쟁 등에 대하여 회사의 귀책사유가 없는 한 책임을 지지 않습니다.
-[부칙]
-1.이 약관은 2019년 11월 1일부터 적용됩니다.
-2.2019년 7월 31일부터 시행되던 종전의 ‘하나금융TI 이용약관’은 하나금융TI 서비스 사업부문의 물적분할에 따라 본 약관으로 대체합니다.
-3.종전의 ‘네이버페이 이용약관’에 동의한 회원의 경우, 해당 약관 제1장(네이버페이 서비스) 및 제3장(네이버페이 안전결제)에 따른 효력은 그대로 유지되며, 11월 1일자로 개정되는 ‘네이버 유료서비스 이용약관’, ‘네이버페이 이용약관’(11월 1일자로 분사되는 네이버파이낸셜㈜가 제공)에 대한 별도의 동의는 필요하지 않습니다.
-
-                              </p>
-                           </br>
-                              <div class="rkmd-checkbox checkbox-rotate checkbox-ripple b-none m-b-20" style="margin-bottom:30px">
-                                 <label class="input-checkbox checkbox-primary">
+                           <div class="col-md-6">
+                              <div class="row advance-elements" style="margin: 5px;">
+                                 <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                    <label class="input-checkbox checkbox-primary">
                                     <input type="checkbox" id="checkbox">
                                     <span class="checkbox"></span>
                                  </label>
-                                 <div class="captions">동의합니다.</div>
+                                    <div class="captions">삼성전자 (15표)</div>
+                                 </div>
                               </div>
-                           </div>
+                                 <div class="row advance-elements" style="margin: 5px;">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                       <label class="input-checkbox checkbox-primary">
+                                       <input type="checkbox" id="checkbox">
+                                       <span class="checkbox"></span>
+                                    </label>
+                                       <div class="captions">SK하이닉스 (5표)</div>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="row advance-elements" style="margin: 5px;">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                       <label class="input-checkbox checkbox-primary">
+                                       <input type="checkbox" id="checkbox">
+                                       <span class="checkbox"></span>
+                                    </label>
+                                       <div class="captions">셀트리온 (10표)</div>
+                                    </div>
+                                 </div>
 
-                           <a class="accordion-msg">개인정보 제공 및 위탁</a>
-                           <div class="accordion-desc" >
-                              <p>
-                                 하나금융TI는 원칙적으로 이용자 동의 없이 개인정보를 외부에 제공하지 않습니다.
-                                 하나금융TI는 이용자의 사전 동의 없이 개인정보를 외부 제공하지 않습니다. 단, 이용자가 외부 제휴사의 서비스를 이용하기 위하여 개인정보 제공에 직접 동의를 한 경우, 그리고 관련 법령에 의거해 네이버에 개인정보 제출 의무가 발생한 경우, 이용자의 생명이나 안전에 급박한 위험이 확인되어 이를 해소하기 위한 경우에 한하여 개인정보를 제공하고 있습니다.
-                              </p>
-                           </br>
-                              <div class="rkmd-checkbox checkbox-rotate checkbox-ripple b-none m-b-20" style="margin-bottom:30px">
-                                 <label class="input-checkbox checkbox-primary">
+                                 <div class="row advance-elements" style="margin: 5px;">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                       <label class="input-checkbox checkbox-primary">
+                                       <input type="checkbox" id="checkbox">
+                                       <span class="checkbox"></span>
+                                    </label>
+                                       <div class="captions">HMM (23표)</div>
+                                    </div>
+
+                                 </div>
+
+                              
+
+
+
+
+
+
+                                 <!-- Border Check box Start -->
+                                 <div class="modal fade modal-flex" id="border-checkbox-Modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             
+                                             <h5 class="modal-title">투표하기</h5>
+                                          </div>
+                                          <!-- end of modal-header -->
+                                          <div class="modal-body">
+                                             <div class="captions">투표가 완료되었습니다.</div>
+                                          </div>
+                                          <!-- end of modal-body -->
+                                       </div>
+                                       <!-- end of modal-content -->
+                                    </div>
+                                    <!-- end of modal-dialog -->
+                                 </div>
+                                 <!-- end of modal -->
+
+
+
+                           </div>
+                           <div class="col-md-6">
+                              <div class="row advance-elements" style="margin: 5px;">
+                                 <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                    <label class="input-checkbox checkbox-primary">
                                     <input type="checkbox" id="checkbox">
                                     <span class="checkbox"></span>
                                  </label>
-                                 <div class="captions">동의합니다.</div>
+                                    <div class="captions">KT (0표)</div>
+                                 </div>
                               </div>
-                           </div>
-                        </div>
+                                 <div class="row advance-elements" style="margin: 5px;">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                       <label class="input-checkbox checkbox-primary">
+                                       <input type="checkbox" id="checkbox">
+                                       <span class="checkbox"></span>
+                                    </label>
+                                       <div class="captions">스타벅스 (5표)</div>
+                                    </div>
+                                 </div>
+                                 
+                                 <div class="row advance-elements" style="margin: 5px;">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                       <label class="input-checkbox checkbox-primary">
+                                       <input type="checkbox" id="checkbox">
+                                       <span class="checkbox"></span>
+                                    </label>
+                                       <div class="captions">현대차 (17표)</div>
+                                    </div>
+                                 </div>
 
+                                 <div class="row advance-elements" style="margin: 5px;">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple">
+                                       <label class="input-checkbox checkbox-primary">
+                                       <input type="checkbox" id="checkbox">
+                                       <span class="checkbox"></span>
+                                    </label>
+                                       <div class="captions">LG 화학 (23표)</div>
+                                    </div>
+
+                                 </div>
+
+                              
+
+
+
+
+
+
+                                 <!-- Border Check box Start -->
+                                 <div class="modal fade modal-flex" id="border-checkbox-Modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             
+                                             <h5 class="modal-title">투표하기</h5>
+                                          </div>
+                                          <!-- end of modal-header -->
+                                          <div class="modal-body">
+                                             <div class="captions">투표가 완료되었습니다.</div>
+                                          </div>
+                                          <!-- end of modal-body -->
+                                       </div>
+                                       <!-- end of modal-content -->
+                                    </div>
+                                    <!-- end of modal-dialog -->
+                                 </div>
+                                 <!-- end of modal -->
+
+
+                              
+                              
+                           </div>
+							</div>
+
+
+                     <div class="row advance-elements" style="margin: 5px;">
+                        <div class="text-center">
+                           <button type="button" class="btn btn-warning btn-block waves-effect waves-light text-uppercase m-r-30:" data-toggle="modal" data-target="#border-checkbox-Modal">
+                                    투표하기
+                              </button>
+                           <button type="button" class="btn btn-primary btn-block waves-effect waves-light text-uppercase">
+                                    결과보기
+                              </button>
+                        </div>
                      </div>
+
+
+
+
+
                   </div>
-               </div>
-               <!-- Scale Open Accordion ends -->
+					</div>
+				</div>
+				<!-- Row end -->
+				<!-- Checkbox end -->
 
-               
 
-               <!-- Color Open Accordion start -->
-               <div class="col-lg-6">
 
-                  <div class="login-card card-block bg-white">
-							<form class="md-float-material" action="index.html">
-								<h3 class="text-center txt-primary">Create a group </h3>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="md-input-wrapper">
-											<input type="text" class="md-form-control" required="">
-											<label>이름</label>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="md-input-wrapper">
-											<input type="text" class="md-form-control" required="">
-											<label>전화번호</label>
-										</div>
-									</div>
-								</div>
-								<div class="md-input-wrapper">
-									<input type="text" class="md-form-control" required="required">
-									<label>계모임 이름</label>
-								</div>
-								<div class="md-input-wrapper">
-									<input type="text" class="md-form-control" required="required">
-									<label>공동 계좌 번호</label>
-								</div>
-                        <div class="md-input-wrapper">
-									<input type="text" class="md-form-control" required="required">
-									<label>연결 계좌 번호</label>
-								</div>
-                        <div class="row">
-                           <div class="col-md-6">
-                              <div class="md-input-wrapper">
-                                 <input type="text" class="md-form-control" required="">
-                                 <label>납입월</label>
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="md-input-wrapper">
-                                 <input type="text" class="md-form-control" required="">
-                                 <label>납입일</label>
-                              </div>
-                           </div>
-                        </div>
-								<div class="rkmd-checkbox checkbox-rotate checkbox-ripple b-none m-b-20">
-									<label class="input-checkbox checkbox-primary">
-										<input type="checkbox" id="checkbox">
-										<span class="checkbox"></span>
-									</label>
-									<div class="captions">Remember Me</div>
-								</div>
-								<div class="col-xs-10 offset-xs-1">
-									<button type="submit" class="btn btn-primary btn-md btn-block waves-effect waves-light m-b-20">Sign up
-									</button>
-								</div>
-								<div class="row">
-									<div class="col-xs-12 text-center">
-										<span class="text-muted">Already have an account?</span>
-										<a href="login1.html" class="f-w-600 p-l-5"> Sign In Here</a>
 
-									</div>
-								</div>
-							</form>
-							<!-- end of form -->
-						</div>
-						<!-- end of login-card -->
 
-                  
-                  </div>
-               </div>
-               <!-- Color Open Accordion ends -->
-            </div>
-            <!-- Row end -->
-            <!-- Main content ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
          </div>
+         <!-- Main content ends -->
          <!-- Container-fluid ends -->
+         <div class="fixed-button">
+            <a href="#!" class="btn btn-md btn-primary">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro
+            </a>
+         </div>
       </div>
    </div>
 
@@ -850,59 +798,55 @@
    <!-- Warning Section Starts -->
    <!-- Older IE warning message -->
    <!--[if lt IE 9]>
-<div class="ie-warning">
-    <h1>Warning!!</h1>
-    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
-    <div class="iew-container">
-        <ul class="iew-download">
-            <li>
-                <a href="http://www.google.com/chrome/">
-                    <img src="assets/images/browser/chrome.png" alt="Chrome">
-                    <div>Chrome</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.mozilla.org/en-US/firefox/new/">
-                    <img src="assets/images/browser/firefox.png" alt="Firefox">
-                    <div>Firefox</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://www.opera.com">
-                    <img src="assets/images/browser/opera.png" alt="Opera">
-                    <div>Opera</div>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.apple.com/safari/">
-                    <img src="assets/images/browser/safari.png" alt="Safari">
-                    <div>Safari</div>
-                </a>
-            </li>
-            <li>
-                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                    <img src="assets/images/browser/ie.png" alt="">
-                    <div>IE (9 & above)</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <p>Sorry for the inconvenience!</p>
-</div>
-<![endif]-->
+      <div class="ie-warning">
+          <h1>Warning!!</h1>
+          <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+          <div class="iew-container">
+              <ul class="iew-download">
+                  <li>
+                      <a href="http://www.google.com/chrome/">
+                          <img src="assets/images/browser/chrome.png" alt="Chrome">
+                          <div>Chrome</div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.mozilla.org/en-US/firefox/new/">
+                          <img src="assets/images/browser/firefox.png" alt="Firefox">
+                          <div>Firefox</div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.opera.com">
+                          <img src="assets/images/browser/opera.png" alt="Opera">
+                          <div>Opera</div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="https://www.apple.com/safari/">
+                          <img src="assets/images/browser/safari.png" alt="Safari">
+                          <div>Safari</div>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                          <img src="assets/images/browser/ie.png" alt="">
+                          <div>IE (9 & above)</div>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <p>Sorry for the inconvenience!</p>
+      </div>
+      <![endif]-->
    <!-- Warning Section Ends -->
 
    <!-- Required Jqurey -->
-   <!-- Required Jqurey -->
-   <script src="assets/plugins/jquery/dist/jquery.min.js"></script>
+   <script src="assets/plugins/Jquery/dist/jquery.min.js"></script>
    <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
    <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
 
    <!-- Required Fremwork -->
    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-
-   <!-- waves effects.js -->
-   <script src="assets/plugins/Waves/waves.min.js"></script>
 
    <!-- Scrollbar JS-->
    <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
@@ -914,14 +858,37 @@
    <!-- notification -->
    <script src="assets/plugins/notification/js/bootstrap-growl.min.js"></script>
 
+   <!-- Sparkline charts -->
+   <script src="assets/plugins/jquery-sparkline/dist/jquery.sparkline.js"></script>
+
+   <!-- Counter js  -->
+   <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+   <script src="assets/plugins/countdown/js/jquery.counterup.js"></script>
+
+   <!-- Echart js -->
+   <script src="assets/plugins/charts/echarts/js/echarts-all.js"></script>
+
+   <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script src="https://code.highcharts.com/modules/exporting.js"></script>
+   <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+
    <!-- custom js -->
    <script type="text/javascript" src="assets/js/main.min.js"></script>
-   <script type="text/javascript" src="assets/pages/accordion.js"></script>
+   <script type="text/javascript" src="assets/pages/dashboard.js"></script>
    <script type="text/javascript" src="assets/pages/elements.js"></script>
    <script src="assets/js/menu.min.js"></script>
-
-   <!--text js-->
-   <script type="text/javascript" src="assets/pages/elements.js"></script>
+<script>
+var $window = $(window);
+var nav = $('.fixed-button');
+$window.scroll(function(){
+    if ($window.scrollTop() >= 200) {
+       nav.addClass('active');
+    }
+    else {
+       nav.removeClass('active');
+    }
+});
+</script>
 
 </body>
 
